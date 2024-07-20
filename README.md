@@ -17,13 +17,54 @@
 3. **Backend Setup**: Initialized Node.js project with Express and connected to MongoDB (Atlas).
 
 ### Database Schema Design
+**Users Schema(MongoDB)**
+-`id`: ObjectId
+-`username`: string
+-`email`: string
+-`password`: string
+-`isAdmin`: boolean
+-`createdAt`: "ISODate"
 
-### Frontend Setup
+  Admins Schema
+  -`id`: "ObjectId",
+  -`userId`: "ObjectId",
+  -`createdAt`: "ISODate"
 
-1. Basic structure set up for React components, including directories for components and services.
-2. State management planned to handle user sessions and cart data.
+Products Schema
+-`id`: ObjectId
+-`name`: string
+-`description`: string
+-`price`: number
+-`stock`: number
+-`categoryId`: ObjectId
+ 
+-`createdAt`:ISODate
 
-### Notes
+  Categories Schema
+-`id`:ObjectId
+-`name`:string
+-`description`:string
+  
+  Orders Schema
+  `id`:ObjectId
+  `userId`: ObjectId
+  `orderDate`:ISODate
+  `totalAmount`:number
+  `status`:string
+  `items`:  -`productId`:ObjectID,-`quantity`:number,-`price`:number,-`paymentId`:ObjectId
 
-- The project is set up using Git and GitHub for version control.
-- Further development will include implementing user interfaces for product listings, shopping cart, and checkout.
+  Payments Schema
+-`id`:ObjectId
+-`orderId`:ObjectId
+-`paymentMethod`:string
+-`paymentDate`:ISODate
+-`amount`:number
+-`status`:string
+
+  Cart Schema
+-`id`:ObjectId
+-`userId`:ObjectId
+-`items`: -`productId`: "ObjectId",-`quantity`: "number"
+-`createdAt`:ISODate
+-`updatedAt`:ISODate
+
