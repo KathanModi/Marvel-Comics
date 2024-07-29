@@ -1,0 +1,17 @@
+{
+  "name": "marvel-store",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start"
+  },
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  },
+  "description": "**Student Name**: Kathan Modi  \r **Student Number**: 8959790  \r **Date**: 17/07/2024",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
