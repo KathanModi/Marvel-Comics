@@ -1,0 +1,16 @@
+/* Category.css */
+
+.category {
+  text-align: center;
+  padding: 20px;
+}
+
+.category h1 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000000;
+  display: inline-block;
+  padding-bottom: 10px;
+}
