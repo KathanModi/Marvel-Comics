@@ -1,8 +1,11 @@
 const Product = require('../models/Product');
+const mongoose = require('mongoose');
 
 const getAllProducts = async (req, res) => {
   try {
-    const products = await Product.find();
+    const { category } = req.query;
+    const query = category ? { category } : {};
+    const products = await Product.find(query);
     res.json(products);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -70,17 +73,29 @@ const updateProduct = async (req, res) => {
 
 const deleteProduct = async (req, res) => {
   try {
+    console.log(`Attempting to delete product with ID: ${req.params.id}`);
+
+    // Validate ObjectId
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+      console.log('Invalid product ID');
+      return res.status(400).json({ message: 'Invalid product ID' });
+    }
+
     const product = await Product.findById(req.params.id);
     if (!product) {
+      console.log('Product not found');
       return res.status(404).json({ message: 'Product not found' });
     }
 
     await product.remove();
+    console.log('Product deleted successfully');
     res.json({ message: 'Product deleted' });
   } catch (err) {
+    console.error('Error deleting product:', err);
     res.status(500).json({ message: err.message });
   }
 };
+
 
 module.exports = {
   getAllProducts,

@@ -27,7 +27,7 @@
 .home .categories li {
   margin: 10px 20px;
   font-size: 1.5rem;
-  background-color: #ffffff;
+  background-color: white;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -36,7 +36,7 @@
 .home .categories li:hover {
   background-color: #ffcc00;
   transform: translateY(-5px);
-  color: #1c1c1c;
+  color: white;
 }
 
 .product-list {
@@ -45,6 +45,29 @@
   justify-content: center;
 }
 
+.admin-login-container {
+  margin-top: 20px;
+}
+
+.admin-login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.admin-login-button:hover {
+  background-color: #cc0000;
+}
+
+/* Responsive Design */
+
+/* For tablets and larger screens */
 @media (max-width: 768px) {
   .home h1 {
     font-size: 2rem;
@@ -55,6 +78,7 @@
   }
 }
 
+/* For mobile phones */
 @media (max-width: 480px) {
   .home h1 {
     font-size: 1.8rem;
@@ -63,6 +87,5 @@
   .home .categories li {
     font-size: 1rem;
     margin: 5px 10px;
- 
   }
 }

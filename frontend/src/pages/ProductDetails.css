@@ -1,53 +1,68 @@
 .product-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .product-details img {
-    max-width: 400px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-  }
-  
-  .product-details img:hover {
-    transform: scale(1.1);
-  }
-  
-  .product-details h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .product-details p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .product-details .price {
-    font-size: 2rem;
-    color: #000000;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .product-details button {
-    background-color: #ff0000;
-    color: #ffffff;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .product-details button:hover {
-    background-color: #cc0000;
-    transform: scale(1.05);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-details img {
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.product-details img:hover {
+  transform: scale(1.1);
+}
+
+.product-details h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.product-details p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.product-details .price {
+  font-size: 2rem;
+  color: #000000;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-details .button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between buttons as needed */
+  width: 100%;
+}
+
+.product-details button {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-details button:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+.product-details button {
+  background-color: #28a745;
+}
+
+.product-details button:hover {
+  background-color: #218838;
+}

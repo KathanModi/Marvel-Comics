@@ -1,0 +1,37 @@
+/* CreateProduct.css */
+
+.create-product {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .create-product form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .create-product input,
+  .create-product select,
+  .create-product textarea {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+  }
+  
+  .create-product button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-product button:hover {
+    background-color: #cc0000;
+  }
+  

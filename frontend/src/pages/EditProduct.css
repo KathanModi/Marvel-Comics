@@ -1,0 +1,29 @@
+/* EditProduct.css */
+
+.edit-product {
+  text-align: center;
+  padding: 50px;
+}
+
+.edit-product form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-product input,
+.edit-product select,
+.edit-product textarea {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+}
+
+.edit-product textarea {
+  height: 100px;
+}
+
+.edit-product button {
+  padding: 10p
+}

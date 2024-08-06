@@ -9,6 +9,13 @@ import Category from './pages/Category';
 import Cart from './pages/Cart';
 import axios from 'axios';
 import './App.css';
+import Checkout from './pages/Checkout';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
+import CreateProduct from './pages/CreateProduct';
+import CreateCategory from './pages/CreateCategory';
+import EditProduct from './pages/EditProduct';
+import EditCategory from './pages/EditCategory';
 
 function App() {
   const [categories, setCategories] = useState([]);
@@ -57,6 +64,13 @@ function App() {
           <Route path="/product/:id" element={<ProductDetails addToCart={addToCart} />} />
           <Route path="/category/:categoryName" element={<Category />} />
           <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} updateCartItem={updateCartItem} />} />
+          <Route path="/checkout" element={<Checkout cart={cart} />} /> 
+          <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/dashboard" element={<AdminDashboard />} />
+          <Route path="/create-product" element={<CreateProduct />} />
+          <Route path="/create-category" element={<CreateCategory />} />
+          <Route path="/edit-product/:id" element={<EditProduct />} />
+          <Route path="/edit-category/:id" element={<EditCategory />} />
         </Routes>
       </div>
       <Footer />
