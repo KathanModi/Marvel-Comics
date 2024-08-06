@@ -70,7 +70,6 @@ const updateProduct = async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 };
-
 const deleteProduct = async (req, res) => {
   try {
     console.log(`Attempting to delete product with ID: ${req.params.id}`);
@@ -87,7 +86,7 @@ const deleteProduct = async (req, res) => {
       return res.status(404).json({ message: 'Product not found' });
     }
 
-    await product.remove();
+    await Product.deleteOne({ _id: req.params.id });
     console.log('Product deleted successfully');
     res.json({ message: 'Product deleted' });
   } catch (err) {
